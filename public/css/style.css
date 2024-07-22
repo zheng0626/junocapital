@@ -1,0 +1,126 @@
+/* Style for the flipbook container */
+#flipbook {
+    width: 800px;
+    height: 400px;
+    margin: auto;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for each page */
+.page {
+    width: 400px; /* Half of the flipbook width */
+    height: 400px;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+}
+
+/* Basic body styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+}
+
+/* Header styling */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Style for the button */
+.styled-button {
+    background-color: #4CAF50; /* Green background */
+    border: none;
+    color: white; /* White text */
+    padding: 15px 32px; /* Padding */
+    text-align: center; /* Centered text */
+    text-decoration: none; /* No underline */
+    display: inline-block; /* Get the element to line up properly */
+    font-size: 16px; /* Increase font size */
+    margin: 4px 2px; /* Small margin */
+    cursor: pointer; /* Pointer/hand icon */
+    border-radius: 8px; /* Rounded corners */
+    transition-duration: 0.4s; /* Animation */
+}
+
+.styled-button:hover {
+    background-color: white; /* White background on hover */
+    color: #4CAF50; /* Green text on hover */
+    border: 2px solid #4CAF50; /* Green border on hover */
+}
+
+/* Basic body styling */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Hide scroll bars */
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+/* Content area for the book */
+.content {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Hide scroll bars */
+}
+
+/* Book styling */
+.book {
+    width: 90%;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Hide scroll bars */
+}
+
+/* Page styling */
+.page {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    background-color: #fff;
+    overflow: hidden; /* Hide scroll bars */
+}
+
+/* Controls styling */
+.controls {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+}
+
+.controls button, .controls input {
+    margin: 0 10px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.controls input {
+    width: 60px;
+}
