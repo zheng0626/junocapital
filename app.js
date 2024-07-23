@@ -8,7 +8,7 @@ app.get('/', (req, res) => {
   res.sendFile(__dirname + '/public/index.html');
 });
 
-app.get('/2018', (req, res) => {
+app.get('/ychs201318', (req, res) => {
   res.sendFile(__dirname + '/public/yikching2018.html');
 });
 
