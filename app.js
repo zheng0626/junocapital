@@ -9,7 +9,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/ychs201318', (req, res) => {
-  res.sendFile(__dirname + '/public/yikching2018.html');
+  res.sendFile(__dirname + '/public/testing.html');
 });
 
 app.listen(port, () => {
