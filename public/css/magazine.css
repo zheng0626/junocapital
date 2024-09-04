@@ -20,6 +20,13 @@ body{
 	left:-461px;
 	top:-300px;
 }
+.magazine-viewport{
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../pics/background.JPG");
+
+	/* background-image: url("../pics/background.JPG"); */
+	background-size: cover;
+    background-position: center;
+}
 
 .magazine-viewport .page{
 	width:461px;

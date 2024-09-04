@@ -79,6 +79,8 @@ function loadApp() {
 
 			elevation: 50,
 
+			acceleration: true,
+
 			// The number of pages
 
 			pages: 20,
@@ -202,7 +204,7 @@ function loadApp() {
 	if ($.isTouch)
 		$('.magazine-viewport').on('zoom.doubleTap', zoomTo);
 	else
-		$('.magazine-viewport').on('zoom.tap', zoomTo);
+		$('.magazine-viewport').on('zoom.doubleTap', zoomTo);
 
 
 	// Using arrow keys to turn the page
