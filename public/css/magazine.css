@@ -22,7 +22,7 @@ body{
 }
 .magazine-viewport{
 	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../pics/background.JPG");
-
+	margin-top: 20px;
 	/* background-image: url("../pics/background.JPG"); */
 	background-size: cover;
     background-position: center;
@@ -288,24 +288,79 @@ body{
 	border-radius:10px;
 }
 
-.zoom-icon{
-	position:absolute;
-	z-index:1000;
+.utility-tab{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 100000000; /* Ensure it's above other content */
+}
+
+/* .zoom-icon{
+
 	width:22px;
 	height:22px;
 	top:10px;
 	right:10px;
-	background-image:url(../pics/zoom-icons.png);
+	background-image:url(../pics/mag-icon.png);
 	background-size:88px 22px;
+} */
+
+.zoom-icon{
+	background-image:url(../pics/mag-icon.png);
 }
 
-.zoom-icon-in{
+.sound-icons .mute-icon{
+	opacity: 0;
+}
+
+.sound-icons.active .volume-icon{
+	opacity: 0;
+}
+
+.sound-icons.active .mute-icon{
+	opacity: 1;
+}
+
+.volume-icon{
+	background-image: url(../pics/audio-icon.png);
+}
+
+.mute-icon{
+	background-image: url(../pics/mute-icon.png);
+}
+
+.icons{
+	width:32px;
+	height:32px;
+	top:10px;
+	right:10px;
+	cursor: pointer;
+	background-size:contain;
+	background-position: center;
+	transition: transform 0.3s ease;
+	transition: filter 0.3s ease;
+}
+
+.icons:hover{
+	transform: scale(1.1);
+	filter: brightness(0.8);
+}
+
+
+/* .zoom-icon-in{
 	background-position:0 0;
 	cursor: pointer;
 }
 
 .zoom-icon-in.zoom-icon-in-hover{
-	background-position:-22px 0;
 	cursor: pointer;
 }
 
@@ -316,7 +371,7 @@ body{
 .zoom-icon-out.zoom-icon-out-hover{
 	background-position:-66px 0;
 	cursor: pointer;
-}
+} */
 
 .bottom{
 	position:absolute;

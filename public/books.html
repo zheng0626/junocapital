@@ -11,12 +11,15 @@
 <script type="text/javascript" src="js/magazine.js"></script>
 <link rel="stylesheet" href="css/magazine.css">
 <link rel="stylesheet" href="css/jquery.ui.css">
+
 </head>
 <body>
 
 <div id="canvas">
-
-<div class="zoom-icon zoom-icon-in"></div>
+<div class="utility-tab">
+	<div class="icons zoom-icon zoom-icon-in"></div>
+	<!-- <div class="icons volume-icon" id="volumeToggle"></div> -->
+</div>
 
 <div class="magazine-viewport">
 	<div class="container">
@@ -83,7 +86,7 @@ function loadApp() {
 
 			// The number of pages
 
-			pages: 20,
+			pages: 44,
 
 			// Events
 
@@ -360,6 +363,20 @@ function loadApp() {
 	$('.magazine').addClass('animated');
 
 }
+
+// volume button
+
+	$(document).ready(function() {
+		$('#volumeToggle').on('click', function() {
+			var $icon = $(this);
+			if ($icon.hasClass('volume-icon')) {
+				$icon.removeClass('volume-icon').addClass('mute-icon');
+			} else {
+				$icon.removeClass('mute-icon').addClass('volume-icon');
+			}
+		});
+	});
+
 
 // Zoom icon
 
