@@ -160,23 +160,23 @@ function zoomTo(event) {
 
 // Load large page
 
-function loadLargePage(page, pageElement) {
+// function loadLargePage(page, pageElement) {
 	
-	var img = $('<img />');
+// 	var img = $('<img />');
 
-	img.on('load', function() {
+// 	img.on('load', function() {
 
-		var prevImg = pageElement.find('img');
-		$(this).css({width: '100%', height: '100%'});
-		$(this).appendTo(pageElement);
-		prevImg.remove();
+// 		var prevImg = pageElement.find('img');
+// 		$(this).css({width: '100%', height: '100%'});
+// 		$(this).appendTo(pageElement);
+// 		prevImg.remove();
 		
-	});
+// 	});
 
-	// Loadnew page
+// 	// Loadnew page
 	
-	img.attr('src', 'pages/' +  page + '-large.jpg');
-}
+// 	img.attr('src', 'pages/' +  page + '-large.jpg');
+// }
 
 // Load small page
 
