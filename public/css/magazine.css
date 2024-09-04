@@ -1,8 +1,8 @@
 body{
-	overflow:hidden;
 	background-color:#fcfcfc;
 	margin:0;
 	padding:0;
+	overflow: hidden; /* Optional: prevents scrollbars */
 }
 
 .magazine-viewport .container{
@@ -380,11 +380,19 @@ body{
 	width:100%;
 }
 
-@media (max-width: 700px) {
+@media (max-height: 700px) {
     .utility-tab {
         display: none;
     }
 	.magazine-viewport{
 		margin-top: 0;
+		padding-top: 10px; /* Adjust as needed */
+		padding-bottom: 10px; /* Adjust as needed */
+		box-sizing: border-box; /* Ensures padding is included in the element's total width and height */
+		overflow: hidden; /* Prevents overflow beyond the padding area */
+		min-height: 600px;
+	}
+	body{
+		overflow:scroll; /* Optional: prevents scrollbars */
 	}
 }
