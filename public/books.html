@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-<title>Using turn.js and the new zoom feature</title>
+<title>KUAY TANG ZHENG</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!-- <meta name="viewport" content="width = 1050, user-scalable = no" /> -->
 <script type="text/javascript" src="js/jquery.min.js"></script>
@@ -12,14 +12,16 @@
 <script type="text/javascript" src="js/magazine.js"></script>
 <link rel="stylesheet" href="css/magazine.css">
 <link rel="stylesheet" href="css/jquery.ui.css">
-
+<audio id="bgm" loop>
+	<source src="audio/2016bgm.mp3" type="audio/mpeg">
+  </audio>
 </head>
 <body>
 
 <div id="canvas">
 <div class="utility-tab">
 	<div class="icons zoom-icon zoom-icon-in"></div>
-	<!-- <div class="icons volume-icon" id="volumeToggle"></div> -->
+	<div class="icons volume-icon" id="volumeToggle"></div>
 </div>
 
 <div class="magazine-viewport">
@@ -133,6 +135,7 @@ function loadApp() {
 			}
 
 	});
+
 
 	// Zoom.js
 
@@ -365,16 +368,32 @@ function loadApp() {
 
 }
 
-// volume button
+	// volume button
+	//music controll
+
+	const bgm = document.getElementById('bgm');
+	bgm.volume = 0.01;
+	bgm.play();
+	let isPlaying = true;
+
+	if(isPlaying){
+		$('#volumeToggle').removeClass('mute-icon').addClass('volume-icon');
+	}else{
+		$('#volumeToggle').removeClass('volume-icon').addClass('mute-icon')
+	}
+
 
 	$(document).ready(function() {
 		$('#volumeToggle').on('click', function() {
 			var $icon = $(this);
-			if ($icon.hasClass('volume-icon')) {
+			if (isPlaying) {
+				bgm.pause();
 				$icon.removeClass('volume-icon').addClass('mute-icon');
 			} else {
+				bgm.play();
 				$icon.removeClass('mute-icon').addClass('volume-icon');
 			}
+			isPlaying = !isPlaying;
 		});
 	});
 

@@ -319,17 +319,6 @@ body{
 	background-image:url(../pics/mag-icon.png);
 }
 
-.sound-icons .mute-icon{
-	opacity: 0;
-}
-
-.sound-icons.active .volume-icon{
-	opacity: 0;
-}
-
-.sound-icons.active .mute-icon{
-	opacity: 1;
-}
 
 .volume-icon{
 	background-image: url(../pics/audio-icon.png);
