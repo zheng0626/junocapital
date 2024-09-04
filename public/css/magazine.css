@@ -22,7 +22,7 @@ body{
 }
 .magazine-viewport{
 	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../pics/background.JPG");
-	margin-top: 20px;
+	margin-top: 27px;
 	/* background-image: url("../pics/background.JPG"); */
 	background-size: cover;
     background-position: center;
@@ -378,4 +378,13 @@ body{
 	left:0;
 	bottom:0;
 	width:100%;
+}
+
+@media (max-width: 700px) {
+    .utility-tab {
+        display: none;
+    }
+	.magazine-viewport{
+		margin-top: 0;
+	}
 }
