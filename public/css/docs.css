@@ -1,6 +1,6 @@
 /* Docs sample */
 
-body{
+body ,html{
 	margin:0;
 	padding:0;
 	overflow:hidden;
@@ -28,31 +28,32 @@ body{
 } */
 
 #canvas {
-    width: 1024px; /* New width */
-    height: 768px; /* New height */
-    margin: 100px auto; /* Center the book */
+    width: 100vw;
+    height: 100vh;
+}
+
+#book-zoom{
+	width: 100%;
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
 }
 
 .sample-docs {
     margin-top: 20px;
-    width: 1024px; /* New width */
+    width: 100%; /* New width */
     height: 768px; /* New height */
 }
 
 
 .sample-docs .page {
-    width: 512px; /* Half of the new book width */
-    height: 768px; /* New height */
+    width: 100%; /* Half of the new book width */
+    height: 100%; /* New height */
     background: white;
 
     -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-}
-
-
-#book-zoom{
-	-webkit-transition: -webkit-transform 1s;
-	transition: transform 1s;
 }
 
 .animated{
@@ -177,3 +178,23 @@ body{
 	-webkit-border-image: url(../pics/tab-hover.png) 5 20 5 20 repeat stretch;
 	border-image: url(../pics/tab-hover.png) 5 20 5 20 repeat stretch;
 }
+
+@media (min-width: 768px) {
+	#book-zoom {
+		max-width: 720px;
+	}
+  }
+  
+  @media (min-width: 992px) {
+	#book-zoom {
+		max-width: 960px;
+	}
+  }
+  
+  
+  @media (min-width: 1200px) {
+	#book-zoom {
+		max-width: 1140px;
+	}
+  }
+  

@@ -1,0 +1,136 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Optional: prevents scrollbars */
+}
+.parentContainer{
+  width: 100vw;
+  height: 100vh;
+  
+}
+.container{
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 768px) {
+  .container, .container-md, .container-sm {
+      max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container, .container-lg, .container-md, .container-sm {
+      max-width: 960px;
+  }
+}
+
+
+@media (min-width: 1200px) {
+  .container, .container-lg, .container-md, .container-sm, .container-xl {
+      max-width: 1140px;
+  }
+}
+
+
+.flip-book {
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
+    display: none;
+    background-size: cover;
+    background-image: url("../pics/background.JPG");
+  }
+  
+  .flip-book .page {
+    background-color: hsl(35, 55, 98);
+    color: hsl(35, 35, 35);
+    border: solid 1px hsl(35, 20, 70);
+    overflow: hidden;
+  }
+  
+  .flip-book .page .page-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+  
+  .flip-book .page .page-content .page-header {
+    height: 30px;
+    font-size: 100%;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  
+  .flip-book .page .page-content .page-image {
+    height: 100%;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+
+  .page-image{
+    padding: 20px 20px 20px 0px;
+    background-color: white;
+  }
+  
+  .flip-book .page .page-content .page-text {
+    height: 100%;
+    flex-grow: 1;
+    font-size: 80%;
+    text-align: justify;
+    margin-top: 10px;
+    padding-top: 10px;
+    box-sizing: border-box;
+    border-top: solid 1px hsl(35, 55, 90);
+  }
+  
+  .flip-book .page .page-content .page-footer {
+    height: 30px;
+    border-top: solid 1px hsl(35, 55, 90);
+    font-size: 80%;
+    color: hsl(35, 20, 50);
+  }
+  
+  .flip-book .page.--left {
+    border-right: 0;
+    box-shadow: inset -7px 0 30px -7px rgba(0, 0, 0, 0.4);
+  }
+  
+  .flip-book .page.--right {
+    border-left: 0;
+    box-shadow: inset 7px 0 30px -7px rgba(0, 0, 0, 0.4);
+  }
+  
+  .flip-book .page.--right .page-footer {
+    text-align: right;
+  }
+  
+  .flip-book .page.hard {
+    background-color: hsl(35, 50, 90);
+    border: solid 1px hsl(35, 20, 50);
+  }
+  
+  .flip-book .page.page-cover {
+    background-color: hsl(35, 45, 80);
+    color: hsl(35, 35, 35);
+    border: solid 1px hsl(35, 20, 50);
+  }
+  
+  .flip-book .page.page-cover h2 {
+    text-align: center;
+    padding-top: 50%;
+    font-size: 210%;
+  }
+  
+  .flip-book .page.page-cover.page-cover-top {
+    box-shadow: inset 0px 0 30px 0px rgba(36, 10, 3, 0.5), -2px 0 5px 2px rgba(0, 0, 0, 0.4);
+  }
+  
+  .flip-book .page.page-cover.page-cover-bottom {
+    box-shadow: inset 0px 0 30px 0px rgba(36, 10, 3, 0.5), 10px 0 8px 0px rgba(0, 0, 0, 0.4);
+  }
