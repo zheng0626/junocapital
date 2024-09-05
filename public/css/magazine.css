@@ -19,13 +19,29 @@ body{
 	height:600px;
 	left:-461px;
 	top:-300px;
+	
+	opacity: 0;
+	visibility: hidden; /* Keep it hidden but still take up space */
+	transition: opacity 5s ease;
+
 }
+
+.magazine-viewport .magazine.show{
+	opacity: 1;  /* Fade in */
+    visibility: visible;  /* Make it visible */
+}
+
+
 .magazine-viewport{
-	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../pics/background.JPG");
+	background-image: url("../pics/background.JPG");
 	margin-top: 27px;
-	/* background-image: url("../pics/background.JPG"); */
 	background-size: cover;
     background-position: center;
+	transition: opacity 1s ease; /* Smooth transition for background */
+}
+
+.magazine-viewport.overlay{
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../pics/background.JPG");
 }
 
 .magazine-viewport .page{
@@ -319,6 +335,17 @@ body{
 	background-image:url(../pics/mag-icon.png);
 }
 
+.sound-icons .mute-icon{
+	opacity: 0;
+}
+
+.sound-icons.active .volume-icon{
+	opacity: 0;
+}
+
+.sound-icons.active .mute-icon{
+	opacity: 1;
+}
 
 .volume-icon{
 	background-image: url(../pics/audio-icon.png);

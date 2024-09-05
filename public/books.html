@@ -367,13 +367,27 @@ function loadApp() {
 	$('.magazine').addClass('animated');
 
 }
+	// show/hide animation for magazine
 
+	setTimeout(function() {
+		// document.querySelector('.magazine').classList.add('show');
+		document.querySelector('.magazine-viewport').classList.add('overlay');
+	}, 2000);
+
+	setTimeout(function() {
+		document.querySelector('.magazine').classList.add('show');
+		// document.querySelector('.magazine-viewport').classList.add('overlay');
+	}, 2500);
+
+
+	setTimeout(function() {
+		bgm.play();
+	}, 1500);
 	// volume button
 	//music controll
 
 	const bgm = document.getElementById('bgm');
-	bgm.volume = 0.07;
-	bgm.play();
+	bgm.volume = 0.1;
 	let isPlaying = true;
 
 	if(isPlaying){
