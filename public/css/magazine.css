@@ -1,4 +1,4 @@
-body{
+background.body{
 	background-color:#fcfcfc;
 	margin:0;
 	padding:0;
@@ -314,7 +314,7 @@ body{
     background-color: #333;
     color: #fff;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     padding: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
