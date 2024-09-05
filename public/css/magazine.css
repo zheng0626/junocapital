@@ -22,7 +22,7 @@ body{
 	
 	opacity: 0;
 	visibility: hidden; /* Keep it hidden but still take up space */
-	transition: opacity 5s ease;
+	transition: opacity 2s ease;
 
 }
 
@@ -335,7 +335,7 @@ body{
 	background-image:url(../pics/mag-icon.png);
 }
 
-.sound-icons .mute-icon{
+/* .sound-icons .mute-icon{
 	opacity: 0;
 }
 
@@ -345,7 +345,8 @@ body{
 
 .sound-icons.active .mute-icon{
 	opacity: 1;
-}
+} */
+
 
 .volume-icon{
 	background-image: url(../pics/audio-icon.png);
@@ -353,6 +354,14 @@ body{
 
 .mute-icon{
 	background-image: url(../pics/mute-icon.png);
+}
+
+.book-icon{
+	background-image: url(../pics/openbook.png);
+}
+
+.close-book-icon{
+	background-image: url(../pics/closebook.png);
 }
 
 .icons{

@@ -22,6 +22,7 @@
 <div class="utility-tab">
 	<div class="icons zoom-icon zoom-icon-in"></div>
 	<div class="icons volume-icon" id="volumeToggle"></div>
+	<div class="icons book-icon" id="bookToggle"></div>
 </div>
 
 <div class="magazine-viewport">
@@ -380,21 +381,27 @@ function loadApp() {
 	}, 2500);
 
 
-	setTimeout(function() {
-		bgm.play();
-	}, 1500);
+
+	// toggle book
 	// volume button
 	//music controll
 
 	const bgm = document.getElementById('bgm');
 	bgm.volume = 0.1;
 	let isPlaying = true;
+	let isShow = true;
 
-	if(isPlaying){
-		$('#volumeToggle').removeClass('mute-icon').addClass('volume-icon');
-	}else{
-		$('#volumeToggle').removeClass('volume-icon').addClass('mute-icon')
-	}
+	setTimeout(function() {
+		bgm.play();
+	}, 1500);
+
+	setTimeout(function() {
+		if(bgm.paused){
+			$('#volumeToggle').removeClass('volume-icon').addClass('mute-icon')
+			isPlaying = false;
+		}
+	}, 2000);
+
 
 
 	$(document).ready(function() {
@@ -408,6 +415,21 @@ function loadApp() {
 				$icon.removeClass('mute-icon').addClass('volume-icon');
 			}
 			isPlaying = !isPlaying;
+		});
+
+		$('#bookToggle').on('click', function() {
+			var $icon = $(this);
+			if (isShow) {
+				document.querySelector('.magazine').classList.remove('show');
+				document.querySelector('.magazine-viewport').classList.remove('overlay');
+				$icon.removeClass('book-icon').addClass('close-book-icon');
+				
+			} else {
+				document.querySelector('.magazine').classList.add('show');
+				document.querySelector('.magazine-viewport').classList.add('overlay');
+				$icon.removeClass('close-book-icon').addClass('book-icon');
+			}
+			isShow = !isShow;
 		});
 	});
 
